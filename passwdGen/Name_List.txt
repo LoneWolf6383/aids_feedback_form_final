@@ -1,0 +1,50 @@
+1,balakshya2008_ai@mepcoeng.ac.in,Aksshaya B,20BAD001,9232 7971 7948
+2,vivek561997_ai@mepcoeng.ac.in,Amirthavarshini B,20BAD002,4200 2981 8966
+3,bthirupathireddy001_ai@mepcoeng.ac.in,B.Tanuja,20BAD003,9989 5785 6976
+4,bhuvana9902_ai@mepcoeng.ac.in,Bhuvana S,20BAD004,4448 2441 1062
+5,dhakshanabalsan_ai@mepcoeng.ac.in,S.B.Dhakshana Kabi,20BAD005,2558 3641 8894
+6,anbu29496_ai@mepcoeng.ac.in,Emily A,20BAD006,7899 5002 2324
+7,kallepuhanumatharao_ai@mepcoeng.ac.in,K.Ashwitha,20BAD007,5360 1971 4020
+8,12v.kani_ai@mepcoeng.ac.in,Kanimozhi V ,20BAD008 ,7085 2143 1060
+9,karishprajaishma_ai@mepcoeng.ac.in,Karish Prajaishma G R,20BAD009,2541 7882 0946
+10,avspkr_ai@mepcoeng.ac.in,APS.Karthika,20BAD010,3555 1585 6109
+11,mathilogha19112002_ai@mepcoeng.ac.in,M.Logha,20BAD011,3221 9422 3086
+12,smanjubala18_ai@mepcoeng.ac.in,Manju Bala S,20BAD012,5766 3161 7105
+13,narsinikshara_ai@mepcoeng.ac.in,N.Akshara,20BAD013,9909 1096 5348
+14,poshikaantonyjoseph0207_ai@mepcoeng.ac.in,A.Poshika,20BAD014,3772 9426 5540
+15,raagavi20_ai@mepcoeng.ac.in,Raagavi,20BAD015,6855 2483 1385
+16,kariansai_ai@mepcoeng.ac.in,K.Subasini,20BAD016,6879 1331 7949
+17,sudharsanrega90_ai@mepcoeng.ac.in,Subiksha S,20BAD017,2447 3899 2384
+18,svarsha2763_ai@mepcoeng.ac.in,Varsha S,20BAD018,6905 4533 2164
+19,kkodiyarasi_ai@mepcoeng.ac.in,S.K.Varshah,20BAD019,2355 3503 9184
+20,viji121719_ai@mepcoeng.ac.in,Vijayabarathi V,20BAD020,5702 5962 1526
+21,vardhani2002_ai@mepcoeng.ac.in,Yoga Vardhani M ,20BAD021,5976 7777 1612
+22,kumaranaakash_ai@mepcoeng.ac.in,Aakash K,20BAD022,5472 3351 5670
+23,sreelathadurai7173_ai@mepcoeng.ac.in,Bharath D,20BAD025,5360 9548 2538
+24,buvaneshkumaars_ai@mepcoeng.ac.in,Buvaneshkumaar A,20BAD026,7013 9663 1729
+25,craniowilbert27_ai@mepcoeng.ac.in,Cranio Wilbert,20BAD027,7013 9663 1729
+26,davisabragam_ai@mepcoeng.ac.in, Davis Joshi A,20BAD028,9834 3692 3578
+27,dharunkumarbaskar_ai@mepcoeng.ac.in,Dharun Kumar B,20BAD029,5676 7889 0275
+28,gokulramesh054_ai@mepcoeng.ac.in,Gokul R,20BAD030,5956 7821 4867
+29,hizzuhishaam2002_ai@mepcoeng.ac.in,Hishaamudin Z,20BAD031,7361 7752 9681
+30,inishraj.b.s003_ai@mepcoeng.ac.in,Inish Raj B,20BAD032,4438 3215 8638
+31,javidahamedm_ai@mepcoeng.ac.in,Javid Ahamed M,20BAD033,8158 1970 2580
+32,jegan7201_ai@mepcoeng.ac.in,Jegan V G,20BAD034,6072 6811 0974
+33,sweeton2001_ai@mepcoeng.ac.in,Jeyanth Kallis Sweeton C,20BAD035,7286 1700 6835
+34,namasivaayam007vijay_ai@mepcoeng.ac.in,Namasivaayam L,20BAD036,4266 3289 0021
+35,nitheeswaran56_ai@mepcoeng.ac.in,Nitheeswaran E,20BAD037,8017 13457810
+36,ponkumaranthenappan.2002_ai@mepcoeng.ac.in,T.Ponkumaran,20BAD038,7971 0615 2824
+37,satheeshamalan1977_ai@mepcoeng.ac.in,Praveen Solomon S,20BAD039,8900 7890 0467
+38,rmr81540_ai@mepcoeng.ac.in,Ragavan M,20BAD040,3214 4483 1969
+39,krajesh2005_ai@mepcoeng.ac.in,R.Sailesh ,20BAD041 , 2010  2229 6819
+40,neeleshmoorthy1006_ai@mepcoeng.ac.in,N.Sakthi Parameswaran,20BAD042,9657 6425 3288
+41,salmanali712003_ai@mepcoeng.ac.in,SALMAN ALI S,20BAD043,5417 2552 8781
+42,mosisankar_ai@mepcoeng.ac.in,S.Siddarth,20BAD044,4965 6154 3343
+43,eugeneronald_ai@mepcoeng.ac.in,Siyon V A,20BAD045,9604 7128 8231
+44,pkmohan.nkl_ai@mepcoeng.ac.in,M.Sujith,20BAD046,4994 2563 5292
+45,vishnushankar.jawaharlal_ai@mepcoeng.ac.in,J. Vishnu Sankar,20BAD047,2749 0396 4004
+46,yaswanth7868_ai@mepcoeng.ac.in,B.Yaswanth,20BAD048,7869 0901 5900
+47,jananiac_ai@mepcoeng.ac.in,A.C.Janani,20BADL01,6904 2168 6919
+48,ajeesahameddmk_ai@mepcoeng.ac.in,A.Safhrin,20BADL02,4983 0517 3176
+49,namasivaayam007vijay_ai@mepcoeng.ac.in,Ajithar A,20BADL03,8121 2599 1905
+50,vimal082002_ai@mepcoeng.ac.in,P.Vimal,20BADL04,5138 0413 9145

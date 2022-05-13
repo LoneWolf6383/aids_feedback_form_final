@@ -1,0 +1,34 @@
+const router = require('express').Router();
+const { Review } = require('../models/reviewModel');
+const { User } = require('../models/userModel');
+
+router.post('/', async (req, res) => {
+    try {
+        console.log(req.body.review);
+        if (await User.findOne({ username: req.body.username })) {
+            if (await Review.findOne({ username: req.body.username })) {
+                await Review.updateOne({ username: req.body.username }, { $set: { review: req.body.review } }, (err, res) => {
+                if(err)
+                        console.log(err);
+                else {
+                    console.log(" review Updated");
+                }
+                })
+            }
+            else{
+            await new Review({
+                username: req.body.username,
+                review: req.body.review
+            }).save(safe=true)
+                console.log(" review Created");
+            }
+            return res.status(200).send({message:'Review Added'})
+        }
+        else
+            return res.status(500).send({message:'Register first'})
+    } catch (error) {
+        return res.status(500).send({message:'File not found/not available',err:error})
+    }
+})
+
+module.exports= router
