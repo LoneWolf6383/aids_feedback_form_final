@@ -1,0 +1,25 @@
+const locs=[
+    "../Images/photo_2022-02-21_11-35-51.jpg",
+    "../Images/photo_2022-02-21_11-41-57.jpg",
+    "../Images/photo_2022-02-21_11-41-42.jpg",
+    "../Images/photo_2022-02-21_11-41-35.jpg",
+    "../Images/photo_2022-02-21_11-41-23.jpg",
+    "../Images/photo_2022-02-21_11-41-17.jpg",
+    "../Images/photo_2022-02-21_11-39-52.jpg",
+    "../Images/photo_2022-02-21_11-42-01.jpg",
+    "../Images/photo_2022-02-21_11-42-04.jpg",
+    "../Images/photo_2022-02-21_11-42-09.jpg",
+    "../Images/photo_2022-02-21_11-42-18.jpg",
+    "../Images/photo_2022-02-21_11-42-23.jpg",
+    "../Images/photo_2022-02-21_11-42-27.jpg",
+    "../Images/photo_2022-02-21_11-42-32.jpg",
+    "../Images/photo_2022-02-21_11-42-37.jpg",
+    "../Images/photo_2022-02-21_11-42-42.jpg",
+    "../Images/photo_2022-02-21_11-42-45.jpg",
+    "../Images/photo_2022-02-21_11-42-49.jpg",
+    "../Images/photo_2022-02-21_11-43-05.jpg",
+    "../Images/photo_2022-02-21_11-43-10.jpg",
+    "../Images/photo_2022-02-21_11-43-12.jpg",
+]
+
+export default locs
