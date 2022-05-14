@@ -41,7 +41,10 @@ export const DynTabs = () => {
                 <tr style={{ display: 'flex' }}>
                 <td style={{ flex: '1' }}><li>{q}</li></td>
                 <td style={{ flex: '1' }}>
-                    <StarRating label={content[key][0] + "+" + q} onChange={ (val) =>{ setRatings(val)}} />
+                    <StarRating label={content[key][0] + "+" + q} onChange={(val) => {
+                      val[content[key][0]]['opinion'] = document.getElementById(content[key][0]).value
+                      setRatings(val)
+                    }} /> 
                 </td>
                 </tr> 
               )}
@@ -65,7 +68,7 @@ export const DynTabs = () => {
             <br />
             <br />
             <br />
-            <SubmitReview data={''} ratings={ratings} />
+            <SubmitReview ratings={ratings} />
           </div>
         </div>
       })

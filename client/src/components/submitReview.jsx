@@ -6,9 +6,10 @@ export const SubmitReview = (props) => {
     const [error, setError] = useState('')
     async function handleSubmit(){
         try {
+            console.log(props.ratings);
             const val = {
                 username: window.sessionStorage.getItem('username'),
-                review:props.ratings        
+                review:props.ratings
             }
             const data = []
             const { data: res } = await axios.post('feedback/review', val)
