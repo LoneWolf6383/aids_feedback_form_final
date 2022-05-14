@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 cluster = MongoClient('mongodb://127.0.0.1:27017')
 db=cluster['aids_feedback_form_db']
-collections=db['userLogIn']
+collections=db['Courses']
 fullNames=[]
 rollNos=[]
 userNames=[]
@@ -26,7 +26,7 @@ full_rollNos=[]
 #         elif(len(name.split())==3):
 #             name,initials1,initials2=name.split()
 #     userNames.append(name[:3]) 
-# passwords=[x+'AIDS'+y for x,y in zip(userNames,rollNos)]
+# passwords=[x+y for x,y in zip(userNames,rollNos)]
 # userData=[]
 # i=0
 # for x,y in zip(fullNames,passwords):
@@ -35,12 +35,12 @@ full_rollNos=[]
 # collections.insert_many(userData)
 # collections.insert_one({'username':'21aidts011','password':'21aidts011','userRole':'faculty'})
 # print('inserted')
-collections.insert_one({'username':'21aidts012','password':'21aidts012','userRole':'faculty'})
-print('inserted')
-collections.insert_one({'username':'21aidts013','password':'21aidts013','userRole':'faculty'})
-print('inserted')
-collections.insert_one({'username':'04itts0026','password':'04itts0026','userRole':'faculty'})
-print('inserted')
+# collections.insert_one({'name':'Faculty1','username':'21aidts012','password':'21aidts012','userRole':'faculty'})
+# print('inserted')
+# collections.insert_one({'name':'Faculty2','username':'21aidts013','password':'21aidts013','userRole':'faculty'})
+# print('inserted')
+# collections.insert_one({'name':'Faculty3','username':'04itts0026','password':'04itts0026','userRole':'faculty'})
+# print('inserted')
 # course_dict1={'19IT301':['DATA STRUCTURES','Implement the various linear data structures using arrays and pointers','Implement the different non-linear data structures','Develop the various heap structures','Work with searching and hashing techniques','Apply traversal algorithms in graph']}
 # course_dict2={'19IT302':['DATABASE MANAGEMENT SYSTEMS','Explore the basic concepts of Database system and design database for enterprise applications using Entity Relationship Diagrams','Analyze the consequence of calculus in designing relational model and create database using query languages with constraints and security','Normalize databases to reduce cost due to redundancy constraints','Assess different types of scheduling and recovery techniques for concurrent transactions','Validate the query evaluation plan and optimize to reduce computational complexity']}
 # course_dict3={'19AD301':['PYTHON PROGRAMMING','Develop basic programs using fundamental structures','Create programs using various collection data types','Apply appropriate Python control flow structure','Implement user defined python functions','Design classes and use them']}

@@ -22,11 +22,11 @@ export const StudentLogInPage = () => {
           console.log(res);
           if (res.data ==='/feedback'){
             window.sessionStorage.setItem('username',username)  
-            window.location.replace('http://localhost:3000/feedback')
+            window.location.replace('http://172.16.10.98:3000/feedback')
           }
           if (res.data ==='/facultyDashboard'){
             window.sessionStorage.setItem('username',username)  
-            window.location.replace('http://localhost:3000/facultyDashboard')
+            window.location.replace('http://172.16.10.98:3000/facultyDashboard')
           }
         } catch (error) {
             if (error.response && error.response.status >= 400 && error.response.status <= 500) 

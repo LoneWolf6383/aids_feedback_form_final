@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f3e57500.css",
+    "main.js": "/static/js/main.712a0c87.js",
+    "static/media/mepcoBanner.jpg": "/static/media/mepcoBanner.922b6537ae9f330be4e2.jpg",
+    "index.html": "/index.html",
+    "main.f3e57500.css.map": "/static/css/main.f3e57500.css.map",
+    "main.712a0c87.js.map": "/static/js/main.712a0c87.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f3e57500.css",
+    "static/js/main.712a0c87.js"
+  ]
+}
