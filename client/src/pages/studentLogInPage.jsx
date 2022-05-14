@@ -19,7 +19,6 @@ export const StudentLogInPage = () => {
             const url = '/feedback/signin'
           window.sessionStorage.setItem('username', username)
           const res = await axios.post(url, data)
-          console.log(res);
           if (res.data ==='/feedback'){
             window.sessionStorage.setItem('username',username)  
             window.location.replace('http://172.16.10.98:3000/feedback')

@@ -6,7 +6,6 @@ router.post('/', async (req, res) => {
         var user
         var isStudent = false
         var isFaculty = false
-        // console.log(req.body);
         // const { error } = validate(req.body)
         // if(error)
         //     return res.status(400).send({ message: error.details[0].message })
@@ -21,7 +20,6 @@ router.post('/', async (req, res) => {
         }
         if(!isFaculty && !isStudent)
             return res.status(500).send({ message: 'User Does Not Exist' })
-        console.log(user);
         if(req.body.isVerified===true){
             if (user) {
                 if (req.body.password === user.password) {
@@ -41,7 +39,6 @@ router.post('/', async (req, res) => {
         //     return jwt.sign({ _id: this._id }, 'jwt-private-key', { expiresIn: '7d' })
         // },message:"logged in successfully"})
     } catch (error) {
-        console.log(error);
         return res.status(500).send({ message:"Internal Server Error"})
     }
 })

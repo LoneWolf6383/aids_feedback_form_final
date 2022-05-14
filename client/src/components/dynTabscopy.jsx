@@ -80,7 +80,6 @@ export const DynTabs = () => {
       setPanels(panels_array)
     }
   const handleChange = (event, newValue) => {
-    console.log(newValue);
     setSelectedTab(newValue)
   }
   
