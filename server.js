@@ -22,12 +22,12 @@ app.use('/getAllCourseDetails', getAllCourseDetails)
 app.use('/getFeedbackPattern', getFeedbackPattern)
 app.use('/addFeedBack',addFeedBack)
 
-// if(process.env.NODE_ENV === 'production'){
-//     app.use(express.static('/build'))
-//     app.get('*', (req, res) => {
-//         res.sendFile(path.resolve(__dirname,'build','index.html'))
-//     })
-// }
+if(process.env.NODE_ENV === 'production'){
+    app.use(express.static('/build'))
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname,'build','index.html'))
+    })
+}
 const port = process.env.PORT || 3001
 app.listen(port, () => {
     console.log('Server fired up at',port);
