@@ -21,11 +21,11 @@ export const StudentLogInPage = () => {
           const res = await axios.post(url, data)
           if (res.data ==='/feedback'){
             window.sessionStorage.setItem('username',username)  
-            window.location.replace('http://172.16.10.98:3000/feedback')
+            window.location.replace('http://localhost:3000/feedback')
           }
           if (res.data ==='/facultyDashboard'){
             window.sessionStorage.setItem('username',username)  
-            window.location.replace('http://172.16.10.98:3000/facultyDashboard')
+            window.location.replace('http://localhost:3000/facultyDashboard')
           }
         } catch (error) {
             if (error.response && error.response.status >= 400 && error.response.status <= 500) 
@@ -58,8 +58,8 @@ export const StudentLogInPage = () => {
           <br />
           <div style={{ display: 'flex' }}>
             <CaptchaBOX onChange={(val) => { setisVerified(val)} } />
-            {isVerified === true && (<ThumbUpOffAltIcon style={{ margin: '22px -15px', }} />)}
-            {isVerified === false && (<ThumbDownOffAltIcon style={{ margin: '22px -15px', }} />)}
+            {isVerified && (<ThumbUpOffAltIcon style={{ margin: '22px -15px', }} />)}
+            {!isVerified && (<ThumbDownOffAltIcon style={{ margin: '22px -15px', }} />)}
           </div>
           <div id="button" class="row"> 
             <button onClick={handleSignIn}>Log In</button>

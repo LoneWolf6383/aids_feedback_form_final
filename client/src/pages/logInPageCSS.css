@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+body{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    user-select: none;
+}
+
+.bg-img{
+    background: url('../images/wallpaperflare.com_wallpaper.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-img::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.content{
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    text-align: center;
+    padding: 60px 32px;
+    width: 370px;
+    transform: translate(-50% , -50%);
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid #fff;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 6px 0 rgba(29, 29, 29, 0.203);
+}
+
+.content header{
+    color:white;
+    font-size: 33px;
+    font-weight: 600;
+    margin: 0 0 35px 0;
+    font-family: 'Kdam Thmor Pro';
+}
+
+.field{
+    position: relative;
+    height: 45px;
+    width: 100%;
+    display: flex;
+    background:rgba(255, 255, 255, 0.133);
+}
+
+.field span{
+    color:rgb(255, 255, 255);
+    width:40px;
+    line-height: 45px;
+}
+
+.field input{
+    height:100%;
+    width:100%;
+    background: transparent;
+    border:none;
+    outline: none;
+    color:rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: 'Poppins',sans-serif;
+}
+
+.space{
+    margin-top: 16px;
+}
+
+.show{
+    position: absolute;
+    right: 13px;
+    font-size: 13px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    display: none;
+    cursor: pointer;
+    font-family: 'Kdam Thmor Pro';
+}
+
+.pass-key:valid ~ .show{
+    display: block;
+}
+
+.field button{
+    height:100%;
+    width:100%;
+    background: rgba(0,183,255,1);
+    border: 2px solid white;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Kdam Thmor Pro';
+    transition: .3s ease;
+}
+
+.field button:hover{
+    background:rgb(0, 0, 0);
+}
+
+::placeholder{
+    color:white;
+    opacity: 1;
+}
+
+.login{
+    color:white;
+    margin: 20px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+i span{
+    margin-left: 8px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-family: 'Poppins',sans-serif;
+}

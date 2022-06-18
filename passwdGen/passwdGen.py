@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 cluster = MongoClient('mongodb://127.0.0.1:27017')
 db=cluster['aids_feedback_form_db']
-collections=db['Courses']
+collections=db['userLogIn']
 fullNames=[]
 rollNos=[]
 userNames=[]
@@ -30,7 +30,7 @@ full_rollNos=[]
 # userData=[]
 # i=0
 # for x,y in zip(fullNames,passwords):
-#     userData.append({'name':x,'username':full_rollNos[i],'password':y , 'userRole':'student'})
+#     userData.append({'name':x.strip(),'username':full_rollNos[i].strip(),'password':y.strip() , 'userRole':'student'})
 #     i+=1
 # collections.insert_many(userData)
 # collections.insert_one({'username':'21aidts011','password':'21aidts011','userRole':'faculty'})
@@ -41,12 +41,13 @@ full_rollNos=[]
 # print('inserted')
 # collections.insert_one({'name':'Faculty3','username':'04itts0026','password':'04itts0026','userRole':'faculty'})
 # print('inserted')
-# course_dict1={'19IT301':['DATA STRUCTURES','Implement the various linear data structures using arrays and pointers','Implement the different non-linear data structures','Develop the various heap structures','Work with searching and hashing techniques','Apply traversal algorithms in graph']}
-# course_dict2={'19IT302':['DATABASE MANAGEMENT SYSTEMS','Explore the basic concepts of Database system and design database for enterprise applications using Entity Relationship Diagrams','Analyze the consequence of calculus in designing relational model and create database using query languages with constraints and security','Normalize databases to reduce cost due to redundancy constraints','Assess different types of scheduling and recovery techniques for concurrent transactions','Validate the query evaluation plan and optimize to reduce computational complexity']}
-# course_dict3={'19AD301':['PYTHON PROGRAMMING','Develop basic programs using fundamental structures','Create programs using various collection data types','Apply appropriate Python control flow structure','Implement user defined python functions','Design classes and use them']}
-# course_dict4={'19AD302':['INTRODUCTION TO AI AND DATA SCIENCE','Apply various searching algorithm in AI','Apply various knowledge representation methods','Explore the basics of data science','Apply concepts of Data Collection and Data Pre-Processing','Work with data analytics']}
-# collections=db['Courses']
-# l1=[course_dict1,course_dict2,course_dict3,course_dict4]
-# for i in l1:
-#     for k,v in i.items():
-#         collections.insert_one({'regulation':19,'courseId':k,'courseName':v[0],'CO':v[1:]})
+collections=db['Courses']
+course_dict1={'19IT301':['DATA STRUCTURES','Implement the various linear data structures using arrays and pointers','Implement the different non-linear data structures','Develop the various heap structures','Work with searching and hashing techniques','Apply traversal algorithms in graph']}
+course_dict2={'19IT302':['DATABASE MANAGEMENT SYSTEMS','Explore the basic concepts of Database system and design database for enterprise applications using Entity Relationship Diagrams','Analyze the consequence of calculus in designing relational model and create database using query languages with constraints and security','Normalize databases to reduce cost due to redundancy constraints','Assess different types of scheduling and recovery techniques for concurrent transactions','Validate the query evaluation plan and optimize to reduce computational complexity']}
+course_dict3={'19AD301':['PYTHON PROGRAMMING','Develop basic programs using fundamental structures','Create programs using various collection data types','Apply appropriate Python control flow structure','Implement user defined python functions','Design classes and use them']}
+course_dict4={'19AD302':['INTRODUCTION TO AI AND DATA SCIENCE','Apply various searching algorithm in AI','Apply various knowledge representation methods','Explore the basics of data science','Apply concepts of Data Collection and Data Pre-Processing','Work with data analytics']}
+collections=db['Courses']
+l1=[course_dict1,course_dict2,course_dict3,course_dict4]
+for i in l1:
+    for k,v in i.items():
+        collections.insert_one({'regulation':19,'courseId':k,'courseName':v[0],'CO':v[1:]})
