@@ -25,7 +25,7 @@ export const DynTabs = () => {
         value: `${key}`,
         child: () => <div>
         <div style={{ display: 'flex'}}>
-          <table style={{ flex: ''}}>
+          <table style={{ flex: '1'}}>
             <tr>
               <td><h4>Feed Back Section</h4><br /></td> 
             </tr>
