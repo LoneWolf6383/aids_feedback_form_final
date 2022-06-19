@@ -4,7 +4,7 @@ import React, { useState, useEffect ,useCallback} from 'react'
 import EmojiRating from 'react-emoji-rating'
 import { SubmitReview } from './submitReview'
 import { StarRating } from './starRating'
-import {Tab} from '@mui/material'
+import {Box, Tab, Tabs} from '@mui/material'
 import {TabList,TabContext,TabPanel} from '@mui/lab'
 export const DynTabs = () => {
   const [ratings, setRatings] = useState({})
@@ -23,19 +23,12 @@ export const DynTabs = () => {
       })
       panels_array.push({
         value: `${key}`,
-        child: () => <div style={{ display: 'flex'}}>
-          <table style={{ flex: '1'}}>
+        child: () => <div>
+        <div style={{ display: 'flex'}}>
+          <table style={{ flex: ''}}>
             <tr>
               <td><h4>Feed Back Section</h4><br /></td> 
             </tr>
-            <tr>   
-              <td>
-                <div style={{ display: 'flex' }}> 
-                  <p style={{ flex: '1' }}>Opinion On this course</p>
-                  <div   style={{ flex: '1' ,textAlign:'right'}}><textarea id={content[key][0]} cols="30" rows="3"></textarea></div>
-                </div>
-              </td>
-            </tr> 
             <tr style={{ listStyle: "none" }}>
               {content[key][1].map((q) =>
                 <tr style={{ display: 'flex' }}>
@@ -50,27 +43,11 @@ export const DynTabs = () => {
               )}
             </tr>
           </table>
-          <div style={{
-            flex: '1',
-            textAlign: 'center',   
-            position: 'relative',  
-            top: '50%',
-            zoom: '150%'
-          }}>
-            <br />
-            <br />
-            <br />
-            <h6>Overall Feed Back</h6>
-            <EmojiRating variant='classic' />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <SubmitReview ratings={ratings} />
           </div>
-        </div>
+          <div style={{display:'flex',position:'relative',top:'40px',alignItems:'center',justifyContent:'center'}}>
+              <SubmitReview style={{margin:'auto',justifyContent:'center',alignItems:'center'}} ratings={ratings}/>
+          </div>
+        </div>    
       })
       setTabIndex(key + 1)
     }
@@ -96,13 +73,13 @@ export const DynTabs = () => {
   }
     
   return (
-    <div>
-      <TabContext value={selectedTab}>
-        <TabList onChange={handleChange}>
+      <Box sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: 'auto' }}>
+      <TabContext   value={selectedTab}>
+        <Tabs orientation='vertical' onChange={handleChange} sx={{ borderRight: 2, borderColor: 'divider' }}>
           {
             tabs.map(tab => (<Tab key={tab.value} label={tab.label} value={tab.value} />))
           }
-        </TabList>
+        </Tabs>
         {
           panels.map(panel => (
             <TabPanel key={panel.value} value={panel.value}>
@@ -111,7 +88,6 @@ export const DynTabs = () => {
           ))
         }
       </TabContext>
-      
-    </div>
+      </Box>
     )
 }

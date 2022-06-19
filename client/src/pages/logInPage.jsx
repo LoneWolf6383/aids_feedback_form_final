@@ -15,16 +15,38 @@ export const LogInPage = () => {
         const data = { username, password ,isVerified }
         try {
             const url = '/feedback/signin'
-          window.sessionStorage.setItem('username', username)
-          const res = await axios.post(url, data)
-          if (res.data ==='/feedback'){
-            window.sessionStorage.setItem('username',username)  
-            window.location.replace('http://localhost:3000/feedback')
-          }
-          if (res.data ==='/facultyDashboard'){
-            window.sessionStorage.setItem('username',username)  
-            window.location.replace('http://localhost:3000/facultyDashboard')
-          }
+            window.sessionStorage.setItem('username', username)
+            const res = await axios.post(url, data)
+            if(res.data==='User Not Available'){
+                document.getElementById('rollNo_ip').style.border='3px solid'
+                document.getElementById('rollNo_ip').style.borderColor='red'
+            }
+            
+            if(res.data==='Invalid Password'){
+                document.getElementById('rollNo_ip').style.borderColor='white'
+                document.getElementById('password_ip').style.border='3px solid'
+                document.getElementById('password_ip').style.borderColor='red'
+            }
+            
+            if(res.data==='Invalid Captcha Retry'){
+                document.getElementById('user_captcha_input').style.border='3px solid'
+                document.getElementById('user_captcha_input').style.borderColor='red'
+            }
+            
+            if (isVerified===true) {
+                document.getElementById('user_captcha_input').style.borderColor='white'
+            }
+            
+            if (res.data ==='/feedback'){
+                document.getElementById('password_ip').style.borderColor='white'
+                window.sessionStorage.setItem('username',username)  
+                window.location.replace('http://localhost:3000/feedback')
+            }
+            if (res.data ==='/facultyDashboard'){
+                document.getElementById('password_ip').style.borderColor='white'
+                window.sessionStorage.setItem('username',username)  
+                window.location.replace('http://localhost:3000/facultyDashboard')
+            }
         } catch (error) {
             if (error.response && error.response.status >= 400 && error.response.status <= 500) 
                 setError(error.response.data.message)
@@ -38,6 +60,7 @@ export const LogInPage = () => {
                     <div class="field">
                         {/* <span class="fa fa-user"></span> */}
                         <input
+                            id='rollNo_ip'
                             type='text'
                             placeholder='Enter your Username'
                             name='Username'
@@ -46,16 +69,14 @@ export const LogInPage = () => {
                             />
                     </div>
                     <div class="field space">
-                        {/* <span class="fa fa-lock"></span> */}
-                        {/* <div class="row"> */}
                             <input
+                                id='password_ip'
                                 type='password'
                                 placeholder='Enter your Password'
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 />
                             <span class="show">Show</span>
-                        {/* </div> */}
                     </div>
                     <div  style={{ display: 'flex' }}>
                         <CaptchaBOX onChange={(val) => { setisVerified(val) }} style={{top:'-5px'}} />

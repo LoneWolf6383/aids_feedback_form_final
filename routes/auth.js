@@ -6,10 +6,7 @@ router.post('/', async (req, res) => {
         var user
         var isStudent = false
         var isFaculty = false
-        // const { error } = validate(req.body)
-        // if(error)
-        //     return res.status(400).send({ message: error.details[0].message })
-        if(User.findOne({ username: req.body.username })){
+        if (await User.findOne({ username: req.body.username })) {
             user = await User.findOne({ username: req.body.username })
             if(user.userRole==='student')
                 isStudent=true
@@ -17,9 +14,9 @@ router.post('/', async (req, res) => {
             if(user.userRole==='faculty')
                 isFaculty=true
                 
-        }
-        if(!isFaculty && !isStudent)
-            return res.status(500).send({ message: 'User Does Not Exist' })
+        } else {
+            return res.send('User Not Available')    
+        }           
         if(req.body.isVerified===true){
             if (user) {
                 if (req.body.password === user.password) {
@@ -30,24 +27,13 @@ router.post('/', async (req, res) => {
                         return res.send('/feedback')
                 }
                 else    
-                    return res.status(400).send({ message: 'Invalid password/Admission Number' })
+                    return res.send('Invalid Password')
             }
         }
         else
-            return res.status(500).send({message:'Invalid Captcha Retry'})
-        // res.send({ data:() => {
-        //     return jwt.sign({ _id: this._id }, 'jwt-private-key', { expiresIn: '7d' })
-        // },message:"logged in successfully"})
+            return res.send('Invalid Captcha Retry')
     } catch (error) {
-        return res.status(500).send({ message:"Internal Server Error"})
+        return res.send("Internal Server Error")
     }
 })
-// const validate = (data) => {
-//     const schema = joi.object({
-//         username: joi.string().required().label('username'),
-//         password: joi.string().required().label('password'),
-        
-//     })
-//     return schema.validate(data)
-// }
 module.exports = router
