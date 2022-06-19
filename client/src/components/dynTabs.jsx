@@ -1,11 +1,10 @@
 /* eslint-disable no-unused-vars */
 import axios from 'axios'
 import React, { useState, useEffect ,useCallback} from 'react'
-import EmojiRating from 'react-emoji-rating'
 import { SubmitReview } from './submitReview'
 import { StarRating } from './starRating'
 import {Box, Tab, Tabs} from '@mui/material'
-import {TabList,TabContext,TabPanel} from '@mui/lab'
+import {TabContext,TabPanel} from '@mui/lab'
 export const DynTabs = () => {
   const [ratings, setRatings] = useState({})
   const [selectedTab, setSelectedTab] = useState('0')
