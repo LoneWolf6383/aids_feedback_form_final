@@ -9,7 +9,7 @@ export const LogInPage = () => {
     const [username, setUserName] = useState('')
     const [password, setPassword] = useState('')
     const [isVerified, setisVerified] = useState()
-    const [error, setError] = useState('')
+    const [, setError] = useState('')
     async function handleSignIn(event) {
       event.preventDefault()
         const data = { username, password ,isVerified }

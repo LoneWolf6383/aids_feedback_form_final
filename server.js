@@ -7,6 +7,8 @@ const submitReviewRoutes = require('./routes/submitReview');
 const getAllCourseDetails = require('./utilities/getAllCourseDetails')
 const addFeedBack = require('./routes/addFeedback')
 const getFeedbackPattern = require('./utilities/getFeedbackPattern')
+const getRatings = require('./utilities/getRatings')
+const isReviewed = require('./utilities/isReviewed')
 const path = require('path');
 var bodyParser = require('body-parser');
 
@@ -21,7 +23,8 @@ app.use('/feedback/review',submitReviewRoutes)
 app.use('/getAllCourseDetails', getAllCourseDetails)
 app.use('/getFeedbackPattern', getFeedbackPattern)
 app.use('/addFeedBack',addFeedBack)
-
+app.use('/getRatings',getRatings)
+app.use('/isReviewed',isReviewed)
 if(process.env.NODE_ENV === 'production'){
     app.use(express.static('/build'))
     app.get('*', (req, res) => {

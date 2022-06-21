@@ -1,3 +1,4 @@
+/* eslint-disable no-lone-blocks */
 import './App.css';
 import  'react-bootstrap'
 // import { FeedBackForm } from './pages/feedBackForm';
@@ -7,16 +8,19 @@ import  'react-bootstrap'
 import {LogInPage} from './pages/logInPage'
 // import { FacultyDashboard } from './pages/facultyDashboard';
 // import {DynTabs} from './components/dynTabscopy'
+// import {PolarAreaChart} from './components/GraphPlot/polarAreaChart'
 function App() { 
   return (
     <>
-      {/* <FacultyDashboard/> */}
-      {/* <StudentLogInPage/> */}
       <LogInPage/>
-      {/* <FeedBackForm/> */}
-      {/* <DynTabs/> */}
     </>
 
-  );
+);
 }
 export default App;
+
+{/* <PolarAreaChart/> */}
+{/* <FacultyDashboard/> */}
+{/* <StudentLogInPage/> */}
+{/* <FeedBackForm/> */}
+{/* <DynTabs/> */}
