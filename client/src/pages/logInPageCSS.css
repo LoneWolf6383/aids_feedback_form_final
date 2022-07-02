@@ -75,17 +75,6 @@ body{
     margin-top: 16px;
 }
 
-.show{
-    position: absolute;
-    right: 13px;
-    font-size: 13px;
-    font-weight: 700;
-    color: rgb(255, 255, 255);
-    display: none;
-    cursor: pointer;
-    font-family: 'Kdam Thmor Pro';
-}
-
 .pass-key:valid ~ .show{
     display: block;
 }

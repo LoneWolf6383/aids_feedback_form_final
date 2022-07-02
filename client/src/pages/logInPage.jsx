@@ -76,7 +76,6 @@ export const LogInPage = () => {
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 />
-                            <span class="show">Show</span>
                     </div>
                     <div  style={{ display: 'flex' }}>
                         <CaptchaBOX onChange={(val) => { setisVerified(val) }} style={{top:'-5px'}} />

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React,{useState} from 'react'
-import {Tab,Row,Col,Nav,Button} from 'react-bootstrap'
+import {Button} from 'react-bootstrap'
 import { DynDropDown } from './dynDropDown'
 export const GenerateCOFeedback = () => {
   const [academicYear, setAcademicYear] = useState('')
@@ -18,31 +18,8 @@ export const GenerateCOFeedback = () => {
     const { data: res } = await axios.post('addFeedBack', data)
     setResponse(res.message)
   }
-  return (<>
-    <div style={{ backgroundColor: '',height:'100%',width:'100%' }}>
-      <h5 style={{
-        textAlign: 'center',
-        margin: '20px',
-        textDecoration: 'overline underline black solid 2px',
-        zoom: '150%',
-        fontFamily: 'Lucida Handwriting',
-        
-      }}>Faculty DashBoard</h5>
-    </div>
-    <div>
-      <Tab.Container id="left-tabs-example" defaultActiveKey="first" >
-        <Row>
-          <Col sm={2}>
-            <Nav variant="pills" className="flex-column">
-              <Nav.Item>
-                <Nav.Link eventKey="first">Generate Course CO Feedback</Nav.Link>
-              </Nav.Item>
-            </Nav>
-          </Col>
-          <Col sm={7} style={{width:'80%',backgroundColor:''}}>
-            <Tab.Content>
-              <Tab.Pane eventKey="first">
-                <div style={{backgroundColor:'',width:'100%',height:'100%'}}>
+  return (
+    <div style={{backgroundColor:'',width:'100%',height:'100%'}}>
                   <table style={{
                     width:'100%'  
                   }}>
@@ -63,14 +40,5 @@ export const GenerateCOFeedback = () => {
                     <Button className='btn btn-success' onClick={sendFeedback}>Send for Feedback</Button> <p>{ response }</p>
                   </table>
                 </div>
-              </Tab.Pane>
-              <Tab.Pane eventKey="second">Work In Progress
-              </Tab.Pane>
-            </Tab.Content>
-          </Col>
-        </Row>
-      </Tab.Container>
-    </div>
-    </>
   )
 }

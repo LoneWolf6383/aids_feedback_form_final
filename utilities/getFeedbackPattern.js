@@ -1,11 +1,11 @@
-const { feedBack } = require('../models/feedbackModel');
-const { courses } =require('../models/courseModel')
+const { FeedBack } = require('../models/feedbackModel');
+const { Course } =require('../models/courseModel')
 const router = require('express').Router()
 
 router.post('/', async (req, res) => {
-    var allCourses = await courses.find({})
+    var allCourses = await Course.find({})
     var finalCourseDetails=[]
-    var feedbackPattern = await feedBack.find({})
+    var feedbackPattern = await FeedBack.find({})
     for (const key in allCourses) {
         for (const key2 in feedbackPattern) {
             if(allCourses[key].courseId === feedbackPattern[key2].courseId)

@@ -11,5 +11,5 @@ const feedBackSchema = new mongoose.Schema(
     {collection:'CO_Feedback_Interface'}
 )
 
-const feedBack = mongoose.model('feedBack',feedBackSchema)
-module.exports={feedBack}
+const FeedBack = mongoose.model('FeedBack',feedBackSchema)
+module.exports={FeedBack}

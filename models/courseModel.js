@@ -9,5 +9,5 @@ const courseSchema = new mongoose.Schema(
     },
     {collection:'Courses'}
 )
-const courses = mongoose.model('courses',courseSchema)
-module.exports={courses}
+const Course = mongoose.model('courses',courseSchema)
+module.exports={ Course }

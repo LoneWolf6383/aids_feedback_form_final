@@ -5,8 +5,8 @@ import App from './App';
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import { FeedBackForm } from './pages/feedBackForm';
 import ThemeContextWrapper from './Themes/themeContextWrapper';
-import {GenerateCOFeedback} from './components/generateCOFeedback'
-import {LogInPage} from './pages/logInPage'
+import { LogInPage } from './pages/logInPage'
+import {FacultyDashboard} from './pages/facultyDashboard'
 ReactDOM.render(<ThemeContextWrapper>
   <React.StrictMode>
     <BrowserRouter>
@@ -14,7 +14,7 @@ ReactDOM.render(<ThemeContextWrapper>
         <Route path='/' element={<App/>}/>  
         <Route path='/login' element={<LogInPage/>}/>  
         <Route path='/feedback' element={<FeedBackForm />} />  
-        <Route path='/facultyDashboard' element={<GenerateCOFeedback/>}/>
+        <Route path='/facultyDashboard' element={<FacultyDashboard/>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

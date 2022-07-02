@@ -12,7 +12,6 @@ export const DynTabs = () => {
   const [tabIndex, setTabIndex] = useState(1)
   const [content, setContent] = useState([])
   
-  
   const [reviewed, setReviewed] = useState(false)
   async function isReviewed(courseName) {
     try {

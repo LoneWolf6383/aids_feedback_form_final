@@ -1,9 +1,9 @@
-const {courses} = require('../models/courseModel');
+const {Course} = require('../models/courseModel');
 const router = require('express').Router()
 
 router.post('/', async (req, res) => {
     var courseDetails=[]
-    const docs = await courses.find({})
+    const docs = await Course.find({})
     for (let i  = 0; i < docs.length; i++) {
         courseDetails.push(docs[i].courseName+'-'+docs[i].courseId)
     } 
