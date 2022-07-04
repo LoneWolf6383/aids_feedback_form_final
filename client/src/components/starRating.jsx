@@ -15,7 +15,7 @@ const StarRating = (props) => {
             review:ratings
       }
       console.log(val)
-        await axios.post('feedback/review', val)
+        await axios.post('/feedback/review', val)
         setDone(true)
         } catch (error) {
           console.log(error);

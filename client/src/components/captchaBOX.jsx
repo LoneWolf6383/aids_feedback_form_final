@@ -26,27 +26,27 @@ export default class CaptchaBOX extends Component {
         <div>
            <div className="container">
                 <div className="form-group" style={{display:'flex'}}>
-                    <div className="col mt-3" style={{}}>
+                    <div className="col mt-3">
                         <LoadCanvasTemplateNoReload />
                     </div>
                     <div className="col mt-3">
-                        <div>
+                        <div className='field' style={{marginLeft:'10px',height:'35px'}}>
                             <input
-                                placeholder="Enter Captcha Value" 
+                                placeholder="Captcha" 
                                 id="user_captcha_input"
                                 name="user_captcha_input"
                                 type="text" 
-                                style={{width:'70%'}}
+                                style={{width:'100%',marginLeft:'10px'}}
                                 />
                         </div>
                     </div>
                     <div className="col mt-3" style={{padding:'0px 10px'}}>
                         <div>
                             <button
-                                style={{zoom:'70%'}}
+                                style={{zoom:'90%'}}
                                 class="btn btn-primary"
                                 onClick={() => this.doSubmit()}
-                            >Submit
+                            >Verify
                             </button>
                         </div>
                     </div>                  

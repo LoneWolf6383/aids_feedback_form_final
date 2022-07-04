@@ -6,6 +6,7 @@ import  'react-bootstrap'
 // import { GenerateCOFeedback } from './components/generateCOFeedback'
 // import {DynDropDown} from './components/DynTabs/dynDropDown'
 import {LogInPage} from './pages/logInPage'
+// import {StudentDashboard} from './pages/studentDashboard'
 // import { FacultyDashboard } from './pages/facultyDashboard';
 // import {DynTabs} from './components/dynTabscopy'
 // import {PolarAreaChart} from './components/GraphPlot/polarAreaChart'
@@ -13,6 +14,7 @@ function App() {
   return (
     <>
       <LogInPage/>
+      {/* <StudentDashboard/>  */}
     </>
 
 );

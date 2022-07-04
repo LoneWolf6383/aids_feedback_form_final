@@ -7,17 +7,20 @@ import { FeedBackForm } from './pages/feedBackForm';
 import ThemeContextWrapper from './Themes/themeContextWrapper';
 import { LogInPage } from './pages/logInPage'
 import {FacultyDashboard} from './pages/facultyDashboard'
-ReactDOM.render(<ThemeContextWrapper>
-  <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<App/>}/>  
-        <Route path='/login' element={<LogInPage/>}/>  
-        <Route path='/feedback' element={<FeedBackForm />} />  
-        <Route path='/facultyDashboard' element={<FacultyDashboard/>}/>
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>
+import { StudentDashboard } from './pages/studentDashboard';
+ReactDOM.render(
+  <ThemeContextWrapper>
+    <React.StrictMode>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<App/>}/>  
+          <Route path='/login' element={<LogInPage/>}/>  
+          <Route path='/studentDashboard' element={<StudentDashboard />} />  
+          <Route path='/studentDashboard/feedback' element={ <FeedBackForm/> } />
+          <Route path='/facultyDashboard' element={<FacultyDashboard/>}/>
+        </Routes>
+      </BrowserRouter>
+    </React.StrictMode>
   </ThemeContextWrapper>,
   document.getElementById('root')
 );

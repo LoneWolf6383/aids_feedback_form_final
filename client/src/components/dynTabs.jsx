@@ -15,8 +15,11 @@ export const DynTabs = () => {
   const [reviewed, setReviewed] = useState(false)
   async function isReviewed(courseName) {
     try {
-      var data = { 'username':window.sessionStorage.getItem('username'),'courseName': courseName }
-        const { data: res } = await axios.post('isReviewed', data)
+      var data = {
+        'username': window.sessionStorage.getItem('username'),
+        'courseName': courseName
+      }
+        const { data: res } = await axios.post('/isReviewed', data)
         if (res === true) {
           setReviewed(true)
         }else{
@@ -68,8 +71,6 @@ export const DynTabs = () => {
     setTabs(tabs_array)
     setPanels(panels_array)
   },[content, reviewed])
-
-  
   
   useEffect(() => {
     generateTabs()
@@ -77,7 +78,13 @@ export const DynTabs = () => {
 
   useEffect(() => {
     const getContent = async () => { 
-      const { data: res } = await axios.post('getFeedbackPattern')
+      const pathname  = window.location.href.split("?")[1]
+      const data = {
+        academicYear: pathname.split('+')[0] ,
+        semester:pathname.split('+')[1]
+      }
+      console.log(data);
+      const { data: res } = await axios.post('/getFeedbackPattern',data)
       setContent(res)
     }
     getContent()

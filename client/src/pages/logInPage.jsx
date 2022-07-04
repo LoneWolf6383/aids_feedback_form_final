@@ -37,10 +37,10 @@ export const LogInPage = () => {
                 document.getElementById('user_captcha_input').style.borderColor='white'
             }
             
-            if (res.data ==='/feedback'){
+            if (res.data ==='/studentDashboard'){
                 document.getElementById('password_ip').style.borderColor='white'
                 window.sessionStorage.setItem('username',username)  
-                window.location.replace('http://localhost:3000/feedback')
+                window.location.replace('http://localhost:3000/studentDashboard')
             }
             if (res.data ==='/facultyDashboard'){
                 document.getElementById('password_ip').style.borderColor='white'
@@ -58,11 +58,10 @@ export const LogInPage = () => {
                 <header> ADS Log In</header>
                 <div>
                     <div class="field">
-                        {/* <span class="fa fa-user"></span> */}
                         <input
                             id='rollNo_ip'
                             type='text'
-                            placeholder='Enter your Username'
+                            placeholder='Username'
                             name='Username'
                             value={username}
                             onChange={(e) => setUserName(e.target.value)}
@@ -72,7 +71,7 @@ export const LogInPage = () => {
                             <input
                                 id='password_ip'
                                 type='password'
-                                placeholder='Enter your Password'
+                                placeholder='Password'
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 />

@@ -5,10 +5,10 @@ const { route } = require('./addFeedback')
 router.post('/', async (req, res) => {
     try {
         if(await Course.findOne({...req.body}))
-            return res.send('Course Already Exists')
+        return res.status(200).send({ message:'Course Already Exists.'})
         else {
             await new Course({...req.body}).save()
-            return res.send('Course Added Successfully')
+            return res.status(200).send({ message:'Course Added Successfully.'})
         }
     }
     catch (error) {

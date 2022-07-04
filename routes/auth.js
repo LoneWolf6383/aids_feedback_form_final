@@ -24,7 +24,7 @@ router.post('/', async (req, res) => {
                     if (isFaculty)
                         return res.send('/facultyDashboard')
                     if(isStudent)
-                        return res.send('/feedback')
+                        return res.send('/studentDashboard')
                 }
                 else    
                     return res.send('Invalid Password')
