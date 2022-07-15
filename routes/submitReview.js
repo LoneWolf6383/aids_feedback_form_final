@@ -15,7 +15,10 @@ router.post('/', async (req, res) => {
                 })
             }
             else{
-            await new Review({...req.body}).save()
+            await new Review({
+                username: req.body.username,
+                review: req.body.review
+            }).save()
                 console.log(" review Created");
             }
             return res.status(200).send({message:'Review Added'})

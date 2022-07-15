@@ -4,7 +4,6 @@ import { GenerateCOFeedback } from '../components/generateCOFeedback'
 import { NavBar } from '../components/NavBar'
 import {Tab,Row,Col,Nav} from 'react-bootstrap'
 import { AddCourse } from '../components/addCourse'
-import { ChooseResults } from '../components/chooseResults'
 export const FacultyDashboard = () => {
   return (
       <div>
@@ -30,9 +29,6 @@ export const FacultyDashboard = () => {
                     <Nav.Item>
                       <Nav.Link eventKey="second">Add Course</Nav.Link>
                     </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="third">Results</Nav.Link>
-                    </Nav.Item>
                   </Nav>
                 </Col>
                 <Col sm={7} style={{width:'80%',backgroundColor:''}}>
@@ -42,9 +38,6 @@ export const FacultyDashboard = () => {
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
                      <AddCourse/>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="third">
-                     <ChooseResults/>
                     </Tab.Pane>
                   </Tab.Content>
                 </Col>
