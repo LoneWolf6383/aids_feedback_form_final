@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import * as React from 'react';
-import PropTypes from 'prop-types';
 let warnedOnce = false;
 
 const warn = () => {
@@ -17,17 +16,4 @@ const MobileDateRangePicker = /*#__PURE__*/React.forwardRef(function DeprecatedM
   warn();
   return null;
 });
-process.env.NODE_ENV !== "production" ? MobileDateRangePicker.propTypes
-/* remove-proptypes */
-= {
-  // ----------------------------- Warning --------------------------------
-  // | These PropTypes are generated from the TypeScript type definitions |
-  // |     To update them edit TypeScript types and run "yarn proptypes"  |
-  // ----------------------------------------------------------------------
-
-  /**
-   * @ignore
-   */
-  key: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
-} : void 0;
 export default MobileDateRangePicker;

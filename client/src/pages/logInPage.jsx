@@ -14,7 +14,7 @@ export const LogInPage = () => {
       event.preventDefault()
         const data = { username, password ,isVerified }
         try {
-            const url = '/feedback/signin'
+            const url = '/signin'
             window.sessionStorage.setItem('username', username)
             const res = await axios.post(url, data)
             if(res.data==='User Not Available'){

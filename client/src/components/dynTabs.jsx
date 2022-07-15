@@ -35,7 +35,7 @@ export const DynTabs = () => {
     var panels_array = []
     for (const key in content) {
       isReviewed(content[key][0])
-      console.log('inside for '+reviewed)
+      // console.log('inside for '+reviewed)
       tabs_array.push({
         value: `${key}`,
         label: content[key][0], 
@@ -53,7 +53,8 @@ export const DynTabs = () => {
                   {content[key][1].map((q) =>
                     <tr style={{ display: 'flex' }}>
                     <td style={{ flex: '1' }}><li>{q}</li></td>
-                    <td style={{ flex: '1' }}>{console.log(content[key][0]+reviewed)}
+                      <td style={{ flex: '1' }}>
+                        {/* {console.log(content[key][0] + reviewed)} */}
                         <StarRating label={content[key][0] + "+" + q} reviewed={reviewed} /> 
                     </td>
                     </tr> 
@@ -83,7 +84,11 @@ export const DynTabs = () => {
         academicYear: pathname.split('+')[0] ,
         semester:pathname.split('+')[1]
       }
+<<<<<<< Updated upstream
       console.log(data);
+=======
+      // console.log(data);`
+>>>>>>> Stashed changes
       const { data: res } = await axios.post('/getFeedbackPattern',data)
       setContent(res)
     }

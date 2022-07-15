@@ -1,15 +1,11 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
 
 var React = _interopRequireWildcard(require("react"));
-
-var _propTypes = _interopRequireDefault(require("prop-types"));
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -32,18 +28,5 @@ const StaticDateRangePicker = /*#__PURE__*/React.forwardRef(function DeprecatedS
   warn();
   return null;
 });
-process.env.NODE_ENV !== "production" ? StaticDateRangePicker.propTypes
-/* remove-proptypes */
-= {
-  // ----------------------------- Warning --------------------------------
-  // | These PropTypes are generated from the TypeScript type definitions |
-  // |     To update them edit TypeScript types and run "yarn proptypes"  |
-  // ----------------------------------------------------------------------
-
-  /**
-   * @ignore
-   */
-  key: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string])
-} : void 0;
 var _default = StaticDateRangePicker;
 exports.default = _default;

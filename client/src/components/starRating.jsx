@@ -10,16 +10,27 @@ const StarRating = (props) => {
   const [rate, setRate] = useState(0)
   async function handleSubmit(ratings){
     try {
-        const val = {
-            username: window.sessionStorage.getItem('username'),
-            review:ratings
+      const pathname  = window.location.href.split("?")[1]
+      const val = {
+          username: window.sessionStorage.getItem('username'),
+          academicYear: pathname.split('+')[0] ,
+          semester:pathname.split('+')[1],
+          review:ratings
       }
+      await axios.post('/feedback/review', val)
+      setDone(true)
+      } catch (error) {
+        console.log(error);
+      }
+<<<<<<< Updated upstream
       console.log(val)
         await axios.post('/feedback/review', val)
         setDone(true)
         } catch (error) {
           console.log(error);
         }
+=======
+>>>>>>> Stashed changes
   }
   const handleRating =  (newRating, name) => {
     name = name.split('+')
@@ -30,7 +41,7 @@ const StarRating = (props) => {
   if(props.reviewed)
     return (
       <div>
-        {console.log(props.reviewed+'reviewed',props.label.split('+')[0])}
+        {/* {console.log(props.reviewed+'reviewed',props.label.split('+')[0])} */}
         <StarRatings
           rating={rate}
           numberOfStars={5}
@@ -46,7 +57,7 @@ const StarRating = (props) => {
     else
     return (
       <div>
-        {console.log(props.reviewed+'Not reviewed',props.label.split('+')[0])}
+        {/* {console.log(props.reviewed+'Not reviewed',props.label.split('+')[0])} */}
         <StarRatings
           rating={rate}
           numberOfStars={5}

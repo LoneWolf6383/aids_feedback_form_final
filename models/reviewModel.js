@@ -3,6 +3,8 @@ const mongoose = require('mongoose')
 const reviewSchema = new mongoose.Schema(
     {
         username: { type: String, required: true },
+        academicYear: { type: String, required: true},
+        semester: { type: String, required: true},
         review:{type:Array,required:true}
     },
     {

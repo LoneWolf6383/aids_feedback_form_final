@@ -13,10 +13,10 @@ router.post('/',async(req,res)=>{
             //objects are added under the key undefined... (for some unknown reason)
             const review_object = arrayToObject(review_array).undefined
             const len = Object.values(review_object[req.body.courseName])
-            return res.send(len.length === 5 ? true : false)
+            return res.send(len.length === 5 ?  false : false)
         }
         else {
-            console.log('user not found')
+            // console.log('user not found')
             return res.send(false)
         }
     } catch (error) {
